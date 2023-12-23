@@ -42,7 +42,7 @@ const Producto = () => {
   }, [titulo]);
 
   const agregarAFavoritos = async () => {
-    const urlServer = "https://retrogrooveapi.onrender.com/";
+    const urlServer = "https://retrogrooveapi.onrender.com";
     const endpointTitulo = `/producto/${titulo}`;
     const token = localStorage.getItem("token");
 
@@ -92,7 +92,7 @@ const Producto = () => {
   };
 
   const agregarAlCarrito = async () => {
-    const urlServer = "https://retrogrooveapi.onrender.com/";
+    const urlServer = "https://retrogrooveapi.onrender.com";
     const endpointTitulo = `/producto/${titulo}`;
     const token = localStorage.getItem("token");
 
