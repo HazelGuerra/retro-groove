@@ -53,105 +53,74 @@ const Perfil = () => {
 
   return (
     <>
-      <NavB />
-      <Hero title={user.name} />
-      <div className="miContainer body">
-        <Container className="">
-          <Row>
-            <Col sm={6}>
-              <Card className="">
-                <Card.Body className="">
-                  <Card.Title>Mi perfil</Card.Title>
-                  <Card.Text>
-                    <Form>
-                      <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Nombre</Form.Label>
-                        <Form.Control
-                          type="text"
-                          placeholder={user.nombre}
-                          disabled
-                        />
-                      </Form.Group>
-                      <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Apellido</Form.Label>
-                        <Form.Control
-                          type="text"
-                          placeholder={user.apellido}
-                          disabled
-                        />
-                      </Form.Group>
-                      <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control
-                          type="email"
-                          placeholder={user.email}
-                          disabled
-                        />
-                      </Form.Group>
-                    </Form>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col sm={6}>
-              <Card className="p-5">
-                <Card.Body>
-                  <Card.Title>Vender en Retro Groove</Card.Title>
-                  <Card.Text>
-                    Vende tus discos, vinilos y cassetes -nuevos o usados- a
-                    miles de usuarios en todo el pais, de manera facil y 100%
-                    gratuita
-                  </Card.Text>
-                  <Button
-                    className="btn btn-outline-dark"
-                    variant=""
-                    onClick={() => navigate(`/vender`)}
-                  >
-                    Publicar un articulo
-                  </Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={6}>
-              <Card className="p-5">
-                <Card.Body>
-                  <Card.Title>Mis favoritos</Card.Title>
-                  <Card.Text>
-                    Guarda tus articulos favoritos para comprarlos cuando
-                    quieras
-                  </Card.Text>
-                  <Button
-                    variant=""
-                    className="btn btn-outline-dark"
-                    onClick={() => navigate(`/favoritos`)}
-                  >
-                    Ver favoritos
-                  </Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col sm={6}>
-              <Card className="p-5">
-                <Card.Body>
-                  <Card.Title>Mis publicaciones</Card.Title>
-                  <Card.Text>Administra tus articulos publicados</Card.Text>
-                  <Button
-                    variant=""
-                    className="btn btn-outline-dark"
-                    onClick={() => navigate(`/publicaciones`)}
-                  >
-                    Ver publicaciones
-                  </Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      <Footer />
-    </>
+            <NavB />
+            <Hero title={user.name} />
+            <div className="miContainer">
+            <Container>
+                <Row>
+                    <Col sm={6}>
+                        <Card id="cardW">
+                            <Card.Body>
+                                <Card.Title>Mi perfil</Card.Title>
+                                <Card.Text>
+                                    <Form>
+                                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                                            <Form.Label>Nombre</Form.Label>
+                                            <Form.Control type="text" placeholder={user.nombre} disabled/>
+                                        </Form.Group>
+                                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                                            <Form.Label>Apellido</Form.Label>
+                                            <Form.Control type="text" placeholder={user.apellido} disabled/>
+                                        </Form.Group>
+                                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                                            <Form.Label>Email</Form.Label>
+                                            <Form.Control type="email" placeholder={user.email} disabled/>
+                                        </Form.Group>
+                                    </Form>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col sm={6}>
+                        <Card id="cardW" className="venderCard p-5">
+                            <Card.Body>
+                                <Card.Title>Vender en Retro Groove</Card.Title>
+                                <Card.Text>Vende tus discos, vinilos y cassetes -nuevos o usados- a miles de usuarios en todo el pais, de manera facil y 100% gratuita</Card.Text>
+                                <img src="https://st.depositphotos.com/1570716/2680/i/450/depositphotos_26801583-stock-photo-buy-now-button-on-the.jpg" alt="imagen de venta" />
+                                <br />
+                                <Button className="btn btn-outline-dark" variant="" onClick={() => navigate(`/vender`)}>Publicar un articulo</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col sm={6}>
+                        <Card id="cardW" className="venderCard p-5">
+                            <Card.Body>
+                                <Card.Title>Mis favoritos</Card.Title>
+                                <Card.Text>Guarda tus articulos favoritos para comprarlos cuando quieras</Card.Text>
+                                <img src="https://st2.depositphotos.com/1006006/7120/i/450/depositphotos_71202953-stock-photo-spotlight-on-gold-star-on.jpg" alt="imagen de venta" />
+                                <br />
+                                <Button variant="" className="btn btn-outline-dark" onClick={() => navigate(`/favoritos`)}>Ver favoritos</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col sm={6}>
+                        <Card id="cardW" className="venderCard p-5">
+                            <Card.Body>
+                                <Card.Title>Mis publicaciones</Card.Title>
+                                <Card.Text>Administra tus articulos publicados</Card.Text>
+                                <img src="https://images.unsplash.com/photo-1632070557521-1e563920a36b?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG0lQzMlQkFzaWNhJTIwZGlzY298ZW58MHx8MHx8fDA%3D" alt="imagen de venta" />
+                                <br />
+                                <Button variant="" className="btn btn-outline-dark" onClick={() => navigate(`/publicaciones`)}>Ver publicaciones</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+            </div>
+            <Footer />
+            </>
   );
 };
 
