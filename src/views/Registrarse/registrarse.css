@@ -32,3 +32,15 @@ border-radius: 40px 40px 40px 40px;
     font-size: 70px;
     color: #B43C15;
 }
+@media (max-width: 430px) {
+    .card-registrarse{
+        width: 90%;
+        height: 600px;
+    }
+    .card-registrarse input{
+        width: 300px;
+    }
+    .titulo-registrarse h1{
+        font-size: 30px;
+    }
+}
